@@ -2,7 +2,7 @@
 # Default section
 # :::::::::::::::::::
 default:
-  RDF4J_BASE : 'http://0.0.0.0:8080/rdf4j-server/'
+  RDF4J_BASE : 'http://datenadler.lan:8080/rdf4j-server/'
 
   # iso2dcat target database, just for testing, otherwise given by Plone
   WRITE_TO: 'test_db'

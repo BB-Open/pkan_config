@@ -3,7 +3,7 @@
 # :::::::::::::::::::
 default:
 
-  SOLR_URI : 'http://solr.datenadler.de/solr/datasets'
+  SOLR_URI : 'http://solr.datenadler.lan/solr/datasets'
 
-  SOLR_SELECT_URI : 'http://solr.datenadler.de/solr/datasets/select'
-  SOLR_SUGGEST_URI : 'http://solr.datenadler.de/solr/datasets/suggest'
+  SOLR_SELECT_URI : 'http://solr.datenadler.lan/solr/datasets/select'
+  SOLR_SUGGEST_URI : 'http://solr.datenadler.lan/solr/datasets/suggest'

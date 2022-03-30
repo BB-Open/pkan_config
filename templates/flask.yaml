@@ -12,5 +12,5 @@ default:
 
   # Download
 
-  DOWNLOAD_URL: 'https://flask.datenadler.de/download'
+  DOWNLOAD_URL: 'https://flask.datenadler.lan/download'
 

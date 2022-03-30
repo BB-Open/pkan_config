@@ -5,7 +5,7 @@ default:
 
   # Harvest
 
-  HARVEST_URL: 'https://backend.datenadler.de/real_run_cron'
+  HARVEST_URL: 'https://backend.datenadler.lan/real_run_cron'
   HARVEST_PERIOD: 120  # seconds
   SCHEDULER_PERIOD: 60  # seconds
   
