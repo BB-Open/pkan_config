@@ -7,6 +7,9 @@ default:
   # iso2dcat target database, just for testing, otherwise given by Plone
   WRITE_TO: 'test_db'
 
+  # rdf2solr source db
+  RDF2SOLR_SOURCE: 'complete_store'
+
   # create DB Type
   RDF_REPO_TYPE: 'native'
 

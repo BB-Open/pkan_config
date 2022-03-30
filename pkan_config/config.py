@@ -13,6 +13,7 @@ FILES = ['solr.yaml', 'rdfstore.yaml', 'iso2dcat.yaml', 'flask.yaml', 'plone.yam
 
 ETC_PATH = Path('/etc/pkan')
 
+
 def get_config():
     comp = component.queryUtility(ICfg)
     # todo: this is not nice, but working with plone
@@ -20,6 +21,7 @@ def get_config():
         register_config()
         comp = component.queryUtility(ICfg)
     return comp
+
 
 def register_config(env=None):
 
@@ -49,6 +51,7 @@ def register_config(env=None):
     # `settings_files` = Load these files in the order.
 
     component.provideUtility(cfg, ICfg)
+
 
 if __name__ == '__main__':
     register_config('Production')
