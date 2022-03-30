@@ -1,0 +1,31 @@
+# :::::::::::::::::::
+# Default section
+# :::::::::::::::::::
+default:
+  # :::::::::::::::::::
+  # Logging
+  # :::::::::::::::::::
+
+  # The logfiles
+  # general log level
+  log_level: DEBUG
+  # The desired log_level for console output
+  log_level_console: DEBUG
+  # The desired log_level for the logfile
+  log_level_file: INFO
+  # Colors for the log console output (Options see color_log-package)
+  log_colors: {
+    'DEBUG': 'cyan',
+    'INFO': 'green',
+    'WARNING': 'yellow',
+    'ERROR': 'red',
+    'CRITICAL': 'red,bg_white',
+  }
+
+  WRITE_EXTENDED_OUTPUT: True
+  APPEND_LOG_FILE: False
+  
+  # Flask
+  PKAN_LOG_DIR: "/var/log/pkan"
+  # The logfiles
+  PKAN_LOG_FILE: "/var/log/pkan/flask.log"

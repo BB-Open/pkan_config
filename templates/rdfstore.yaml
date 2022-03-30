@@ -1,0 +1,18 @@
+# :::::::::::::::::::
+# Default section
+# :::::::::::::::::::
+default:
+  RDF4J_BASE : 'http://0.0.0.0:8080/rdf4j-server/'
+
+  # iso2dcat target database, just for testing, otherwise given by Plone
+  WRITE_TO: 'test_db'
+
+  # create DB Type
+  RDF_REPO_TYPE: 'native'
+
+  # Stores
+
+  PLONE_SKOS_CONCEPT_NAMESPACE: 'skos_concepts'
+  PLONE_DCAT_NAMESPACE: 'dcat_store'
+  PLONE_ALL_OBJECTS_NAMESPACE: 'complete_store'
+  PLONE_OWL_STORE: 'owl'

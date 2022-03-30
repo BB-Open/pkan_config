@@ -1,0 +1,16 @@
+# :::::::::::::::::::
+# Default section
+# :::::::::::::::::::
+default:
+
+  EMAIL_SUBJECT: "Datenadler Problem gemeldet"
+
+  # Language Settings
+
+  FIRST_LANGUAGE: 'de'
+  SECOND_LANGUAGE: 'en'
+
+  # Download
+
+  DOWNLOAD_URL: 'https://flask.datenadler.de/download'
+

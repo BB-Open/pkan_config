@@ -1,0 +1,9 @@
+# :::::::::::::::::::
+# Default section
+# :::::::::::::::::::
+default:
+
+  SOLR_URI : 'http://solr.datenadler.de/solr/datasets'
+
+  SOLR_SELECT_URI : 'http://solr.datenadler.de/solr/datasets/select'
+  SOLR_SUGGEST_URI : 'http://solr.datenadler.de/solr/datasets/suggest'
