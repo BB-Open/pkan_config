@@ -1,0 +1,1 @@
+Copy Templates to /etc/pkan and configure as needed.
