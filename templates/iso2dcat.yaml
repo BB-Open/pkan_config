@@ -36,6 +36,8 @@ default:
 
   FALLBACK_CATALOG_URL : "http://lgb.de"
 
+  DEFAULT_PRIORITY: 15
+
   # :::::::::::::::::::
   # Directories
   # :::::::::::::::::::
