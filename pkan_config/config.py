@@ -13,30 +13,27 @@ FILES = ['solr.yaml', 'rdfstore.yaml', 'iso2dcat.yaml', 'flask.yaml', 'plone.yam
 
 ETC_PATH = Path('/etc/pkan')
 
-
-def get_config():
-    comp = component.queryUtility(ICfg)
-    # todo: this is not nice, but working with plone
-    if comp is None:
-        register_config()
-        comp = component.queryUtility(ICfg)
-    return comp
+PLONE_DIR = 'plone_harvester'
 
 
-def register_config(env=None):
-
+def load_config(files, directory=None, env=None):
     if env is None:
         env='Production'
 
     load_files = []
 
-    default_dir = Path(os.path.abspath(__file__)).parent.parent / 'templates'
+    if directory:
+        default_dir = Path(os.path.abspath(__file__)).parent.parent / 'templates' / directory
+        etc_dir = ETC_PATH / directory
+    else:
+        default_dir = Path(os.path.abspath(__file__)).parent.parent / 'templates'
+        etc_dir = ETC_PATH
 
-    for file in FILES:
-        if exists(ETC_PATH / file):
-            load_files.append(ETC_PATH/file)
+    for file in files:
+        if exists(etc_dir / file):
+            load_files.append(etc_dir / file)
         elif exists(default_dir/file):
-            load_files.append(default_dir/file)
+            load_files.append(default_dir / file)
         else:
             raise ConfigFileNotFound(file)
 
@@ -46,6 +43,26 @@ def register_config(env=None):
         environments=True,
         env=env,
     )
+
+    return cfg
+
+
+def get_plone_harvester_config_by_name(file):
+    return load_config([file], directory=PLONE_DIR)
+
+
+def get_config():
+    comp = component.queryUtility(ICfg)
+    # todo: this is not nice, but working with plone_harvester
+    if comp is None:
+        register_config()
+        comp = component.queryUtility(ICfg)
+    return comp
+
+
+def register_config(env=None):
+
+    cfg = load_config(FILES, directory=None, env=env)
 
     # `envvar_prefix` = export envvars with `export DYNACONF_FOO=bar`.
     # `settings_files` = Load these files in the order.
