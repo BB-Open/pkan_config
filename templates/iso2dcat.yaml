@@ -34,7 +34,8 @@ default:
 
   DCM_URI: 'https://data.geobasis-bb.de/geobasis/daten/_datenadler/dataset-catalog-mapping.json'
 
-  FALLBACK_CATALOG_URL : "http://lgb.de"
+  FALLBACK_URL: "http://lgb.de"
+  FALLBACK_CATALOG_NAME: "LGB Fallback Catalog"
 
   DEFAULT_PRIORITY: 15
 
