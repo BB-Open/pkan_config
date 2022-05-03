@@ -13,4 +13,6 @@ default:
   # Download
 
   DOWNLOAD_URL: 'https://flask.datenadler.lan/download'
+  DOWNLOAD_DIR: '/etc/pkan/download_cache'
+  DOWNLOAD_FILENAME: 'datenadler'
 
