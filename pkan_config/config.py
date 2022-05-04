@@ -9,7 +9,15 @@ from zope import component
 from pkan_config.exceptions import ConfigFileNotFound
 from pkan_config.interfaces import ICfg
 
-FILES = ['solr.yaml', 'rdfstore.yaml', 'iso2dcat.yaml', 'flask.yaml', 'plone.yaml', 'settings.yaml', '.secrets.yaml']
+FILES = [
+    'solr.yaml',
+    'rdfstore.yaml',
+    'iso2dcat.yaml',
+    'flask.yaml',
+    'plone.yaml',
+    'settings.yaml',
+    '.secrets.yaml'
+]
 
 ETC_PATH = Path('/etc/pkan')
 
@@ -18,15 +26,17 @@ PLONE_DIR = 'plone_harvester'
 
 def load_config(files, directory=None, env=None):
     if env is None:
-        env='Production'
+        env = 'Production'
 
     load_files = []
 
     if directory:
-        default_dir = Path(os.path.abspath(__file__)).parent.parent / 'templates' / directory
+        default_dir = Path(os.path.abspath(__file__)).parent.parent
+        default_dir = default_dir / 'templates' / directory
         etc_dir = ETC_PATH / directory
     else:
-        default_dir = Path(os.path.abspath(__file__)).parent.parent / 'templates'
+        default_dir = Path(os.path.abspath(__file__)).parent.parent
+        default_dir = default_dir / 'templates'
         etc_dir = ETC_PATH
 
     for file in files:
