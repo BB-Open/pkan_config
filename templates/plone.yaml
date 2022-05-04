@@ -9,3 +9,6 @@ default:
   HARVEST_PERIOD: 120  # seconds
   SCHEDULER_PERIOD: 60  # seconds
   
+  # Rest URL
+
+  PLONE_REST_API_QUERY_URL: 'http://backend.datenadler.lan/@search?fullobjects=1'
