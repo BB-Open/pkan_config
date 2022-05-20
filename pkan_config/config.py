@@ -79,6 +79,9 @@ def register_config(env=None):
 
     component.provideUtility(cfg, ICfg)
 
+def unregister_config():
+    component.provideUtility(None, ICfg)
+
 
 if __name__ == '__main__':
     register_config('Production')
