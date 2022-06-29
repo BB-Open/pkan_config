@@ -56,3 +56,7 @@ default:
 
   WRITE_EXTENDED_OUTPUT : True
   APPEND_LOG_FILE : False
+
+## Python executable
+  PYTHON_EXE: '/home/sandra/workspace/venvs/pkan-config-_8KVcBu9-py3.9/bin/python'
+
