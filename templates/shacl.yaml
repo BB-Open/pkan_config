@@ -1,0 +1,7 @@
+# :::::::::::::::::::
+# Default section
+# :::::::::::::::::::
+default:
+  SHACL_MODE: 'file'
+
+  SHACL_LOG_FILE: 'validator.log'

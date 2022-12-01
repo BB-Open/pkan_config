@@ -16,7 +16,8 @@ FILES = [
     'flask.yaml',
     'plone.yaml',
     'settings.yaml',
-    '.secrets.yaml'
+    '.secrets.yaml',
+    'shacl.yaml'
 ]
 
 ETC_PATH = Path('/etc/pkan')
