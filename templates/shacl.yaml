@@ -2,6 +2,6 @@
 # Default section
 # :::::::::::::::::::
 default:
-  SHACL_MODE: 'file'
+  SHACL_MODE: 'store'
 
   SHACL_LOG_FILE: 'validator.log'
