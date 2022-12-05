@@ -5,3 +5,7 @@ default:
   SHACL_MODE: 'store'
 
   SHACL_LOG_FILE: 'validator.log'
+
+  SHACL_RULE_DB: 'shacl_rules'
+
+  SHACL_ONTO_DB: 'shacl_onto_db'
