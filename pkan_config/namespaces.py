@@ -24,6 +24,7 @@ NAMESPACES = {
     'sh': 'http://www.w3.org/ns/shacl#',
     'foaf': 'http://xmlns.com/foaf/0.1/',
     'gsp': 'http://www.opengis.net/ont/geosparql#',
+    'skos': 'http://www.w3.org/2004/02/skos/core#',
 }
 
 DCATDE = Namespace('http://dcat-ap.de/def/dcatde/')
