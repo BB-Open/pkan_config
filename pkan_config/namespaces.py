@@ -1,4 +1,5 @@
 from rdflib.namespace import Namespace
+# noinspection PyUnresolvedReferences
 from rdflib.namespace import FOAF, RDF, DCTERMS, SKOS, XSD, RDFS
 
 NAMESPACES = {
