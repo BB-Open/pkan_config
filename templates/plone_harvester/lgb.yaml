@@ -24,7 +24,7 @@ default:
 # :::::::::::::::::::
 # Directories
 # :::::::::::::::::::
-  LOG_PATH : '/var/log/pkan/lgb_harvest'
+  PKAN_LOG_DIR : '/var/log/pkan/lgb_harvest'
   CSW_PREFIX : ''
   PLUGINS_DIR : ''
 

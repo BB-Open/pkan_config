@@ -42,7 +42,7 @@ default:
   # :::::::::::::::::::
   # Directories
   # :::::::::::::::::::
-  LOG_PATH: ''
+  PKAN_LOG_DIR: '/var/log/pkan'
   CSW_PATH: 'xml'
   CSW_PREFIX: ''
   PLUGINS_DIR: ''
