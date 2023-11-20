@@ -17,3 +17,5 @@ export const PLONE_UNREACHABLE_MESSAGE = 'Teile des dargestellten Inhalts werden
 export const FLASK_UNREACHABLE_MESSAGE = 'Teile des dargestellten Inhalts werden aus dem Flask Backend geladen. ' +
     'Leider scheint das Flask Backend gerade nicht erreichbar zu sein. ' +
     'Bitte versuchen Sie die Seite neu zu laden oder wenden Sie sich an den Admin.';
+
+export const DEFAULT_DISPLAY_AMOUNT_FACET = 10;
