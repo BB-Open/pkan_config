@@ -7,3 +7,8 @@ class ConfigFileNotFound(BaseException):
 
     def __str__(self):
         return 'Config file {} not found'.format(self.file_path)
+
+class DirectoryMissing(BaseException):
+    """
+    Missing Directory
+    """

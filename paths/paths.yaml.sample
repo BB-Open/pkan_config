@@ -1,0 +1,5 @@
+Default:
+  # nuxt base directory
+  FRONTEND_SRC_DIRECTORY: '/home/user/pkan_search'
+  # directory for overwritten configs
+  CONFIG_DIR: '/home/user/etc/pkan'

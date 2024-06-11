@@ -2,7 +2,6 @@ import os
 from os.path import exists
 from pathlib import Path
 
-import zope
 from dynaconf import Dynaconf
 from zope import component
 
@@ -20,25 +19,37 @@ FILES = [
     'shacl.yaml'
 ]
 
-ETC_PATH = Path('/etc/pkan')
+# user_path = Path('/etc/pkan')
 
 PLONE_DIR = 'plone_harvester'
 
-
+def load_user_path():
+    default_dir = Path(os.path.abspath(__file__)).parent.parent
+    paths_file = default_dir / 'paths' / 'paths.yaml'
+    if not exists(paths_file):
+        raise ConfigFileNotFound(f'Please create paths-File {paths_file}')
+    cfg = Dynaconf(
+        envvar_prefix='DYNACONF',
+        settings_files=[paths_file],
+        environments=True,
+    )
+    return cfg
 def load_config(files, directory=None, env=None):
     if env is None:
         env = 'Production'
+
+    user_path = Path(load_user_path().CONFIG_DIR)
 
     load_files = []
 
     if directory:
         default_dir = Path(os.path.abspath(__file__)).parent.parent
         default_dir = default_dir / 'templates' / directory
-        etc_dir = ETC_PATH / directory
+        etc_dir = user_path / directory
     else:
         default_dir = Path(os.path.abspath(__file__)).parent.parent
         default_dir = default_dir / 'templates'
-        etc_dir = ETC_PATH
+        etc_dir = user_path
 
     for file in files:
         if exists(etc_dir / file):
@@ -86,3 +97,5 @@ def unregister_config():
 
 if __name__ == '__main__':
     register_config('Production')
+    cfg = get_config()
+    print(cfg)
